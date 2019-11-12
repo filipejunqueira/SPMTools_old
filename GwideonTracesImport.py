@@ -21,6 +21,7 @@ def get_one_line(filepath, line_number):
 
 units = get_one_line(file_path, 3).decode("utf-8").strip().split("    ")
 
-plt.plot(trace[:,0],trace[:,1])
-
+plt.plot(trace[:,0],trace[:,1], "#fd9696")
+plt.ylabel(units[1])
+plt.xlabel(units[0])
 plt.show()
