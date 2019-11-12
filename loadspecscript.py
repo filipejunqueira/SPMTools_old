@@ -87,7 +87,6 @@ plt.text(
     family="serif",
 )
 
-
 plt.savefig(
     "D:/LTData/2019-07-11/specs/" + plot_title + ".png",
     bbox_inches="tight",
