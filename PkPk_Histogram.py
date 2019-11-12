@@ -5,10 +5,9 @@ import tkinter as tk
 from tkinter.filedialog import askopenfilename
 
 
-
 # Load data
 mtrx_data = access2thematrix.MtrxData()
-data_file = r'D:\LTData\2019-07-11\default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--63_1.Df_mtrx'
+data_file = r"D:\LTData\2019-07-11\default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--63_1.Df_mtrx"
 traces, message = mtrx_data.open(data_file)
 im, _ = mtrx_data.select_image(traces[1])
 image = im.data
@@ -26,6 +25,6 @@ im_diff_filtered = im_diff[im_diff <= 2e-9]
 
 # Make histrogram
 plt.hist(im_diff_filtered, bins=40)
-plt.xlabel('Height Difference.')
-plt.ylabel('Num.')
+plt.xlabel("Height Difference.")
+plt.ylabel("Num.")
 plt.show()

@@ -16,12 +16,14 @@ file_path = (
 
 trace = np.loadtxt(file_path, skiprows=3)
 
+
 def get_one_line(filepath, line_number):
     return check_output(["sed", "-n", "%sp" % line_number, filepath])
 
+
 units = get_one_line(file_path, 3).decode("utf-8").strip().split("    ")
 
-plt.plot(trace[:,0],trace[:,1], "#fd9696")
+plt.plot(trace[:, 0], trace[:, 1], "#fd9696")
 plt.ylabel(units[1])
 plt.xlabel(units[0])
 plt.show()
