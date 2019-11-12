@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99c3221f-11d4-444f-a31d-14ddc29ea152" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Df_averaging.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImportMatrixFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PkPk_Histogram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SPMTools.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SPMTools.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/DefaultSpecLoader.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/DefaultSpecLoader.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loadspecscript.py" beforeDir="false" afterPath="$PROJECT_DIR$/loadspecscript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Df_averaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Df_averaging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GwideonTracesImport.py" beforeDir="false" afterPath="$PROJECT_DIR$/GwideonTracesImport.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadspecscript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+            <state relative-caret-position="1385">
+              <caret line="89" selection-start-line="89" selection-end-line="93" selection-end-column="1" />
               <folding>
                 <element signature="e#74#92#0" expanded="true" />
               </folding>
@@ -53,12 +46,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Df_averaging.py">
+        <entry file="file://$PROJECT_DIR$/GwideonTracesImport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="312">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#67#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,10 +82,10 @@
         <option value="C:/Cmder/vendor/clink/clink_inputrc_base" />
         <option value="$PROJECT_DIR$/numpyloadtest.py" />
         <option value="$PROJECT_DIR$/PkPk_Histogram.py" />
-        <option value="$PROJECT_DIR$/GwideonTracesImport.py" />
-        <option value="$PROJECT_DIR$/loadspecscript.py" />
         <option value="$PROJECT_DIR$/ImportMatrixFile.py" />
+        <option value="$PROJECT_DIR$/loadspecscript.py" />
         <option value="$PROJECT_DIR$/Df_averaging.py" />
+        <option value="$PROJECT_DIR$/GwideonTracesImport.py" />
       </list>
     </option>
   </component>
@@ -168,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Df_averaging">
+  <component name="RunManager" selected="Python.GwideonTracesImport">
     <configuration name="Df_averaging" type="PythonConfigurationType" factoryName="Python">
       <module name="SPMTools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -192,9 +185,6 @@
       <module name="SPMTools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\defpython37\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -279,12 +269,12 @@
       <workItem from="1573057233836" duration="10486000" />
       <workItem from="1573316237077" duration="791000" />
       <workItem from="1573506404130" duration="6741000" />
-      <workItem from="1573566911582" duration="7687000" />
+      <workItem from="1573566911582" duration="13125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64733000" />
+    <option name="totallyTimeSpent" value="70171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,7 +310,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49284577" visible="true" weight="0.282516" />
+      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49284577" visible="true" weight="0.31236672" />
       <window_info anchor="right" x="0" y="0" width="300" height="800" id="Documentation" order="4" sideWeight="0.5022762" side_tool="true" weight="0.18390192" />
       <window_info anchor="right" id="Database" order="5" sideWeight="0.49772382" weight="0.18390192" />
     </layout>
@@ -353,6 +343,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GwideonTracesImport.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/specloader$DefaultSpecLoader.coverage" NAME="DefaultSpecLoader Coverage Results" MODIFIED="1572982250349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -412,16 +413,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data_file.txt" />
-    <entry file="file://$PROJECT_DIR$/GwideonTracesImport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#67#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PkPk_Histogram.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -432,29 +423,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Df_averaging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ImportMatrixFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="285">
+          <caret line="15" column="83" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadspecscript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        <state relative-caret-position="1385">
+          <caret line="89" selection-start-line="89" selection-end-line="93" selection-end-column="1" />
           <folding>
             <element signature="e#74#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Df_averaging.py">
+    <entry file="file://$PROJECT_DIR$/GwideonTracesImport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="312">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#67#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
