@@ -1,8 +1,6 @@
 # Script for opening .txt and saving spec files exported from vernisage.
-
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy import signal
 
 # First step is to locate file. One method is to manually select the spectroscopy txt .file.
 # To do this one must use the following code:
@@ -57,7 +55,7 @@ plt.ylabel("Frequency shift | df(Z)[Hz]")
 plt.title(plot_title)
 plt.xlabel("Z[nm]")
 
-# setting up x ticks and y ticks
+# setting up x ticks and y ticks - This is important so the last and first ticks are visible
 xticks_array = np.around(
     np.linspace(
         min(data_forward[:, 0] / 10 ** (-9)),
@@ -73,6 +71,9 @@ y_min = min(np.append(data_forward[:, 1], data_retrace[:, 1]))
 yticks_array = np.around(np.linspace(y_min, y_max, num=5), 3)
 plt.xticks(xticks_array)
 plt.yticks(yticks_array)
+
+# Text showing the positions of the spec. It just copy that from the positions from the .txt
+# It puts this text in the lower right coner of the the figure.
 
 textposx = (
     min(data_forward[:, 0] / 10 ** (-9)) + max(data_forward[:, 0] / 10 ** (-9))
