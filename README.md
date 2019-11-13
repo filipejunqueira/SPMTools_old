@@ -1,4 +1,4 @@
-# SPMTools - Welcome to random stuff I made to help me analise my LT AFM/STM data!
+# SPMTools - Welcome to some random stuff I made to help me analise my LT AFM/STM data!
 
 All this stuff was made to be used with **The All Mighty Omicron's** systems folders and files.
 We use python here. So before you begin I suggest you create a conda env with python 3.7+. 
@@ -15,11 +15,11 @@ It assumes you went fowards and backwards with your spectroscopy (which you shou
 
 ## gwideontracesimport.py
 
-imports a gwideon profile trace and creates a nice neat little graphic. 
+Imports a gwideon profile trace and creates a nice neat little graphic. 
 
 ## Df_averaging.py
 
-So this one grabs a file (any Z, DF, I .matrix file really) and avarages each row. 
+So this one grabs a file (any Z, DF, I .matrix file) and avarages each row. 
 Useful when you want to know how the Df has been varing on your constant Df image. 
 Can be done the same for I (for STM images).
 
