@@ -1,5 +1,5 @@
 import numpy as np
-from ImportMatrixFile import import_matrix_file
+from spmFunctions import import_matrix_file
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
 import matplotlib.pyplot as plt
@@ -11,6 +11,7 @@ file_path = (
     askopenfilename()
 )  # show an "Open" dialog box and return the path to the selected file
 
+# TODO include input somehow in the function calling. Need to think about the use cases.
 
 print("Type 0: up forward, 1: up retrace, 2: down forward, 3: down retrace")
 file_index = int(input())
