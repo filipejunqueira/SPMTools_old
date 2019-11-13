@@ -31,10 +31,14 @@ x_axis = np.arange(start=0.0, stop=image_height, step=image_height / image_size)
 temp_title = file_path.split("--")
 plot_title = temp_title[1].replace("_mtrx", "")
 
+# TODO could make this labels tecnicly file specific (like read the file_path and determine if its Z(mn) Df(Z) etc....)
+
 plt.plot(x_axis / 10 ** (-9), mean_array, "#6699CC")
-plt.ylabel("Frequency shift | df(Z)[Hz]")
+plt.ylabel("Frequency shift | df [Hz]")
 plt.title(plot_title + " Line average")
 plt.xlabel("Z[nm]")
+
+# TODO need to make the code to be not folder specific here.
 
 plt.savefig(
     "D:/LTData/2019-07-11/traces/" + plot_title + "_Line_average.png",
