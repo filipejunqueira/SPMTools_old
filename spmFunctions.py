@@ -6,7 +6,7 @@ from tkinter.filedialog import askopenfilename
 
 # Function that imports matrix file
 
-
+#TODO import_matrix_file not working?! Need to check series_number argument
 def import_matrix_file(series_number, file_path):
 
     mtrx_data = access2thematrix.MtrxData()
@@ -15,7 +15,7 @@ def import_matrix_file(series_number, file_path):
     image = im.data
 
     # dict = {0: "up forward", 1: "up retrace", 2: "down forward", 3: "down retrace"}
-    print("Image has been uploaded to variables image and im")
+    #print("Image has been uploaded to variables image and im")
 
     return image, im
 
@@ -50,12 +50,11 @@ def load_spec(file_path):
     data_forward = data[:data_size]
     data_retrace = data[data_size:]
 
-    return data_forward, data_retrace, data_size, spec_position
+    return data_forward, data_retrace, data_size, spec_position, data
 
 
 # grabs one specific line of a .txt file
-
-
+# I copied this from stackoverflow, I have no idea what check_output really does... But it works! :-)
 def get_one_line(filepath, line_number):
     return check_output(["sed", "-n", "%sp" % line_number, filepath])
 

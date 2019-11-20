@@ -3,7 +3,7 @@ from spmFunctions import import_matrix_file
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
 import matplotlib.pyplot as plt
-import matplotlib.transforms as trfm
+import matplotlib.transforms as tvrfm
 
 root = tk.Tk()
 root.withdraw()  # prevents the default window  to open.
@@ -35,13 +35,13 @@ plot_title = temp_title[1].replace("_mtrx", "")
 
 plt.plot(x_axis / 10 ** (-9), mean_array, "#6699CC")
 plt.ylabel("Frequency shift | df [Hz]")
-plt.title(plot_title + " Line average")
+plt.title(plot_title + " Line average_" +str(file_index))
 plt.xlabel("Z[nm]")
 
 # TODO need to make the code to be not folder specific here.
 
 plt.savefig(
-    "D:/LTData/2019-07-11/traces/" + plot_title + "_Line_average.png",
+    "D:/LTData/2019-07-11/traces/" + plot_title + "_"+str(file_index) + "_Line_average.png",
     bbox_inches="tight",
     transparent=True,
 )
