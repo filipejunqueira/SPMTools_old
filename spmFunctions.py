@@ -6,7 +6,6 @@ from tkinter.filedialog import askopenfilename
 
 # Function that imports matrix file
 
-#TODO import_matrix_file not working?! Need to check series_number argument
 def import_matrix_file(series_number, file_path):
 
     mtrx_data = access2thematrix.MtrxData()
