@@ -1,13 +1,12 @@
 import access2thematrix
 import matplotlib.pyplot as plt
 import numpy as np
-import tkinter as tk
-from tkinter.filedialog import askopenfilename
-
+from spmFunctions import get_path_gui
 
 # Load data
 mtrx_data = access2thematrix.MtrxData()
-data_file = r"D:\LTData\2019-07-11\default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--63_1.Df_mtrx"
+
+data_file = get_path_gui()
 traces, message = mtrx_data.open(data_file)
 im, _ = mtrx_data.select_image(traces[1])
 image = im.data
