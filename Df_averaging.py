@@ -1,15 +1,10 @@
 import numpy as np
-from spmFunctions import import_matrix_file
-import tkinter as tk
-from tkinter.filedialog import askopenfilename
+from spmFunctions import import_matrix_file, get_path_gui
 import matplotlib.pyplot as plt
-import matplotlib.transforms as tvrfm
 
-root = tk.Tk()
-root.withdraw()  # prevents the default window  to open.
-file_path = (
-    askopenfilename()
-)  # show an "Open" dialog box and return the path to the selected file
+file_path = get_path_gui()
+root_path = file_path.split("/default")
+
 
 # TODO include input somehow in the function calling. Need to think about the use cases.
 
@@ -35,13 +30,10 @@ plot_title = temp_title[1].replace("_mtrx", "")
 
 plt.plot(x_axis / 10 ** (-9), mean_array, "#6699CC")
 plt.ylabel("Frequency shift | df [Hz]")
-plt.title(plot_title + " Line average_" +str(file_index))
+plt.title(f"{plot_title} Line average_{file_index}")
 plt.xlabel("Z[nm]")
 
-# TODO need to make the code to be not folder specific here.
-
-plt.savefig(
-    "D:/LTData/2019-07-11/traces/" + plot_title + "_"+str(file_index) + "_Line_average.png",
+plt.savefig(f"{root_path[0]}/traces/{plot_title}_{file_index}_Line_average.png",
     bbox_inches="tight",
     transparent=True,
 )
