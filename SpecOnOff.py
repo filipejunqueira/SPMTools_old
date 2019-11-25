@@ -11,6 +11,7 @@ data_off_path = get_path_gui()
 data_on_tuple = load_spec(data_on_path)
 data_off_tuple = load_spec(data_off_path)
 
+# TODO rewrite this so it only uses the object now. Makes it simpler to read.
 data_forward_diff = np.asarray(
     [x - y for x, y in zip(data_on_tuple[0][:, 1], data_off_tuple[0][:, 1])]
 )
