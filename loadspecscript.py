@@ -1,20 +1,11 @@
 # Script for opening .txt and saving spec files exported from vernisage.
 import numpy as np
 import matplotlib.pyplot as plt
+from spmFunctions import get_path_gui
 
-# First step is to locate file. One method is to manually select the spectroscopy txt .file.
-# To do this one must use the following code:
-import tkinter as tk
-from tkinter.filedialog import askopenfilename
 
-root = tk.Tk()
-root.withdraw()  # prevents the default window  to open.
-file_path = (
-    askopenfilename()
-)  # show an "Open" dialog box and return the path to the selected file
-
-# Second method is to just add the address to file_path variable.
-# file_path = "D:/LTData/2019-07-11/specs/default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--204_1-Df(Z)_1.txt"
+file_path = get_path_gui()
+root_path = file_path.strip("/specs/")[0]
 data = np.loadtxt(file_path)
 
 # grab spec position:
@@ -88,11 +79,7 @@ plt.text(
     family="serif",
 )
 
-# TODO need to make the code to be not folder specific here.
-
 plt.savefig(
-    "D:/LTData/2019-07-11/specs/" + plot_title + ".png",
-    bbox_inches="tight",
-    transparent=True,
+    f"{root_path}/specs/{plot_title}.png", bbox_inches="tight", transparent=True,
 )
 plt.show()
