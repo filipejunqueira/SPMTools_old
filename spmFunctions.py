@@ -3,7 +3,7 @@ import numpy as np
 from subprocess import check_output
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
-
+from pathlib import Path
 # Function that imports matrix file
 def import_matrix_file(series_number, file_path):
 
@@ -47,8 +47,16 @@ def load_spec(file_path):
     # spits original data into forward data and backwards data
     data_forward = data[:data_size]
     data_retrace = data[data_size:]
-    # TODO create a class here and return this as objects with 5 parameters?! :-P
-    return data_forward, data_retrace, data_size, spec_position, data
+
+    class Spec:
+        def __init__(self, forward, retrace, size, position):
+            self.forward = forward
+            self.retrace = retrace
+            self.size = size
+            self.position = position
+
+    spec_object = Spec(data_forward,data_retrace,data_size,spec_position)
+    return  data_forward, data_retrace, data_size, spec_position, data, spec_object
 
 
 # grabs one specific line of a .txt file
@@ -57,10 +65,12 @@ def get_one_line(filepath, line_number):
     return check_output(["sed", "-n", "%sp" % line_number, filepath])
 
 
+# Todo - add initialdir=initialdirectory atribute ti get_path_gui
 def get_path_gui():
     root = tk.Tk()
     root.withdraw()  # prevents the default window  to open.
+    root.attributes("-topmost", True) #makes the window go on top of other applications
     file_path = (
         askopenfilename()
-    )  # show an "Open" dialog box and return the path to the selected file
+    )  # show an "Open" dialog box and return the path to the selected file, function path makes / -> \ for windows
     return file_path
