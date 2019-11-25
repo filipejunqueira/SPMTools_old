@@ -5,7 +5,6 @@ import tkinter as tk
 from tkinter.filedialog import askopenfilename
 
 # Function that imports matrix file
-
 def import_matrix_file(series_number, file_path):
 
     mtrx_data = access2thematrix.MtrxData()
@@ -40,7 +39,7 @@ def load_spec(file_path):
 
     position_temp = position_temp.strip().split("# Sample position                 ")[1]
     position_temp = position_temp.strip("[nm]").split(",")
-    spec_position = np.asfarray(position_temp, float)
+    spec_position = np.asfarray(position_temp, dtype="float64")
 
     # size of my data, might need to set this manually to 1024 if the retrace data is incomplete
     data_size = len(data) // 2
@@ -48,7 +47,7 @@ def load_spec(file_path):
     # spits original data into forward data and backwards data
     data_forward = data[:data_size]
     data_retrace = data[data_size:]
-
+    # TODO create a class here and return this as objects with 5 parameters?! :-P
     return data_forward, data_retrace, data_size, spec_position, data
 
 
