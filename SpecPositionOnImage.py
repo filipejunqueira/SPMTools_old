@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from spmFunctions import load_spec, import_matrix_file, get_path_gui
+from spmFunctions import load_spec, import_matrix_file, get_path_gui, plot_spec
 import numpy as np
 from pathlib import Path
 
@@ -75,12 +75,14 @@ for item in specs_path:
 print("Select an image two plot the points")
 image_gwideon_path = get_path_gui()
 
+# This adds the background image
 im = plt.imread(image_gwideon_path)
 fig, ax = plt.subplots()
 ax.imshow(im, extent=[0, image_height * (10 ** 9), 0, image_height * (10 ** 9)])
 
 color_palette = ["#FFFF00", "#FFFF33", "#FFFF66", "#FFFF99", "#FFFFCC"]
 
+# This crazy shit here plots the points and the arrows in their correct places
 index = int(0)
 offset = (image_height * (10 ** 9)) / 2
 
@@ -114,10 +116,30 @@ while index < len(spec_pos):
     )
     index += 1
 
-# put a red dot, size 40, at 2 locations:
-# plt.scatter(x=[30, 70], y=[20, 90], c="r", s=80)
-
 plt.xlabel("Z[nm]")
 plt.title(f"Image {txt_input[0]} with spec position")
 plt.savefig(f"D:/LTData/2019-07-11/specs/{txt_input[0]}Z_with_{txt_input[1]}_specs.png")
 plt.show()
+
+# ----------------------------------------------------------------------------------------
+# Option to save spec images in bulk!
+print('Would you like to print all the specs?')
+loop_flag = True
+while loop_flag == True:
+
+    plot_check = input()
+    if plot_check in ("y", "Y", "yes", "YES", "yes"):
+        for item in specs_path:
+            plot_spec(item)
+            plt.show()
+        loop_flag = False
+        print(f"Ok! Specs saved.")
+        break
+
+    elif plot_check in ("n", "N", "NO", "No", "no"):
+        print("ok then, not saved anything!:\n")
+        loop_flag = False
+    else:
+        print("Try again")
+        break
+print('')
