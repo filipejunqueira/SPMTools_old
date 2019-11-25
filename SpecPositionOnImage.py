@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 from spmFunctions import load_spec, import_matrix_file, get_path_gui
 import numpy as np
+from pathlib import Path
+
 
 # -----------------------------------------------------------------------------------------
 # Starts with a .txt called in a folder.
@@ -9,10 +11,11 @@ import numpy as np
 # if you want to get another image (like a .png).
 
 # root_paths must be edited for each folder you are working on
-root = "D:\\LTData\\2019-07-11\\"
-root_matrix = "default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--"
+# may need to change the forward slash in windows or linux!
+root = f"D:/LTData/2019-07-11/"
+root_matrix = f"default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--"
 root_image_path = f"{root}{root_matrix}"
-root_specs_path = f"{root}specs\\{root_matrix}"
+root_specs_path = f"{root}specs/{root_matrix}"
 print("Select the input file")
 f = open(get_path_gui(), "r")
 txt_input = (f.read()).split(" ")
