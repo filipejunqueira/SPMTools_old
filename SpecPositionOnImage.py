@@ -9,8 +9,10 @@ import numpy as np
 # if you want to get another image (like a .png).
 
 # root_paths must be edited for each folder you are working on
-root_image_path = "D:\\LTData\\2019-07-11\\default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--"
-root_specs_path = "D:\\LTData\\2019-07-11\\specs\\default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--"
+root = "D:\\LTData\\2019-07-11\\"
+root_matrix = "default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--"
+root_image_path = f"{root}{root_matrix}"
+root_specs_path = f"{root}specs\\{root_matrix}"
 print("Select the input file")
 f = open(get_path_gui(), "r")
 txt_input = (f.read()).split(" ")
@@ -24,10 +26,13 @@ for item in specs_list:
     specs_path.append(f"{root_specs_path}{item}-{txt_input[1]}_1.txt")
 
 # Retreive size of image from image_path - and check if must keep it
-print("Getting information from the image of spec - height and data.\n")
-print("Select which image you want")
-print("Type 0: up forward, 1: up retrace, 2: down forward, 3: down retrace")
-file_index = int(input())
+# TODO check if I really need this. For now use file_index=0
+
+# print("Select which image you want")
+# print("Type 0: up forward, 1: up retrace, 2: down forward, 3: down retrace")
+# file_index = int(input())
+
+file_index = 0
 image, image_raw = import_matrix_file(file_index, image_path)
 image_height = image_raw.height
 image_size = image.shape[0]
@@ -37,7 +42,7 @@ image_size = image.shape[0]
 # If you change the image size during scanning it only stores the last value! :-(
 
 print(
-    f"The image_height is {image_height*(10**9)} nm, is that correct? \n If yes press y if no n:"
+    f"The image_height is {image_height*(10**9)} nm, is that correct?\n If yes press y if no n:"
 )
 loop_flag = True
 while loop_flag == True:
