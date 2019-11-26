@@ -5,7 +5,7 @@ from spmFunctions import get_path_gui
 
 
 file_path = get_path_gui()
-root_path = file_path.strip("/specs/")[0]
+root_path = file_path.split("/specs/")[0]
 data = np.loadtxt(file_path)
 
 # grab spec position:
@@ -39,7 +39,7 @@ data_retrace = data[data_size:]
 
 temp_title = file_path.split("--")
 plot_title = temp_title[1].replace(".txt", "")
-fig = plt.figure()
+# fig = plt.figure()
 plt.plot(data_forward[:, 0] / 10 ** (-9), data_forward[:, 1], "#06D6A0")
 plt.plot(data_retrace[:, 0] / 10 ** (-9), data_retrace[:, 1], "#FFD166")
 plt.ylabel("Frequency shift | df(Z)[Hz]")
