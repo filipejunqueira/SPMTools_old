@@ -98,7 +98,7 @@ while index < len(spec_pos):
         xy=(offset + spec_pos[index][0], offset + spec_pos[index][1]),
         xytext=(
             image_height * (10 ** 9) * 0.92,
-            image_height * (10 ** 9) * (0.40 - index / 20),
+            image_height * (10 ** 9) * (0.46 - index / 20),
         ),
         arrowprops=dict(
             facecolor="#ffc000",
@@ -118,12 +118,12 @@ while index < len(spec_pos):
 
 plt.xlabel("Z[nm]")
 plt.title(f"Image {txt_input[0]} with spec position")
-plt.savefig(f"D:/LTData/2019-07-11/specs/{txt_input[0]}Z_with_{txt_input[1]}_specs.png")
+plt.savefig(f"D:/LTData/2019-07-11/specs/{txt_input[0]}Z_with_{txt_input[1]}_specs.png", bbox_inches="tight", transparent=True)
 plt.show()
 
 # ----------------------------------------------------------------------------------------
 # Option to save spec images in bulk!
-print('Would you like to print all the specs?')
+print('Would you like to print all the specs? If yes press, y if no, n:')
 loop_flag = True
 while loop_flag == True:
 
@@ -142,4 +142,4 @@ while loop_flag == True:
     else:
         print("Try again")
         break
-print('')
+print('\nThe end\n')
