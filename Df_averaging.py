@@ -22,7 +22,9 @@ image_size = image.shape[0]
 
 # Creating an axis to plot the average value of Df
 x_axis = np.arange(start=0.0, stop=image_height, step=image_height / image_size)
-
+# in case you need to slice x,y to show in graph
+#x_axis = x_axis[:300]
+#mean_array = mean_array[:300]
 temp_title = file_path.split("--")
 plot_title = temp_title[1].replace("_mtrx", "")
 
