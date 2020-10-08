@@ -6,6 +6,46 @@ from tkinter.filedialog import askopenfilename
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+def load_trace_r(file_path):
+
+    data = np.loadtxt(file_path)
+    stringToMatch_start = "# Manipulation vector: start      "
+    stringToMatch_end = "#                      end        "
+    start_position_temp = ""
+    end_position_temp = ""
+
+    # get line
+    with open(file_path, "r") as file:
+        for line in file:
+            if stringToMatch_start in line:
+                start_position_temp = line
+                break
+        for line in file:
+            if stringToMatch_end in line:
+                end_position_temp = line
+                break
+
+    start_position_temp = start_position_temp.strip().split(stringToMatch_start)[1]
+    start_position_temp = start_position_temp.strip("[nm]").split(",")
+    start_position = np.asfarray(start_position_temp, dtype="float64")
+
+    end_position_temp = end_position_temp.strip().split(stringToMatch_end)[1]
+    end_position_temp = end_position_temp.strip("[nm]").split(",")
+    end_position = np.asfarray(end_position_temp, dtype="float64")
+
+    position = [start_position,end_position]
+    data_size = len(data)
+
+    class Trace:
+        def __init__(self, size, pos, data_):
+            self.size = size
+            self.position = pos
+            self.data = data_
+
+    trace_object = Trace(data_size,position,data)
+    return  trace_object
+
+
 # Function that imports matrix file
 def import_matrix_file(series_number, file_path):
 
@@ -89,7 +129,7 @@ def plot_spec(file_path):
     plt.plot(spec.forward[:, 0] / 10 ** (-9), spec.forward[:, 1], "#06D6A0")
     plt.plot(spec.retrace[:, 0] / 10 ** (-9), spec.retrace[:, 1], "#FFD166")
     plt.ylabel("Frequency shift | df(Z)[Hz]")
-]    plt.title(plot_title)
+    plt.title(plot_title)
     plt.xlabel("Z[nm]")
 
     # setting up x ticks and y ticks - This is important so the last and first ticks are visible
@@ -128,4 +168,45 @@ def plot_spec(file_path):
     plt.savefig(
         f"{root_path}/specs/{plot_title}.png", bbox_inches="tight", transparent=True,
     )
+    return True
+
+def plot_trace_r(file_path):
+
+    trace = load_trace_r(file_path)
+
+    root_path = file_path.split("/specs/")[0]
+    temp_title = file_path.split("--")
+    plot_title = temp_title[1].replace(".txt", "")
+
+    fig = plt.figure()
+
+    y_max = max(trace.data[:, 1])
+
+    plt.plot(trace.data[:, 0] / 10 ** (-9), trace.data[:, 1] / 10 ** (-9), "#06D6A0")
+
+    plt.ylabel("Z(r)[nm]")
+    plt.title(plot_title)
+    plt.xlabel("Trace - r[nm]")
+    plt.gca().invert_xaxis()
+
+    # setting up x ticks and y ticks - This is important so the last and first ticks are visible
+    #xticks_array = np.around(np.linspace(min(trace.data[:, 0] / 10 ** (-9)), max(trace.data[:, 0] / 10 ** (-9)), num=5, ), 2, )
+
+
+    #yticks_array = np.around(np.linspace(y_min, y_max, num=5), 3)
+    #plt.xticks(xticks_array)
+    #plt.yticks(yticks_array)
+
+    # Text showing the positions of the spec. It just copy that from the positions from the .txt
+    # It puts this text in the lower right coner of the the figure.
+
+    #textposx = (min(trace.data[:, 0] / 10 ** (-9)) + max(trace.data[:, 0] / 10 ** (-9))) / 2
+    #textposx = 400
+    #textposy = 400
+    #textposy = (y_max + y_min)
+
+    #plt.text(textposx * (1.1), textposy * (1.5), f"Spec pos: {trace.position}", fontsize=7, family="serif", )
+    plt.savefig(f"{root_path}/specs/{plot_title}.png", bbox_inches="tight", transparent=True, )
+    plt.show()
+
     return True
