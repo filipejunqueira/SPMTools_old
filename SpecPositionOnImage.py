@@ -9,10 +9,13 @@ from pathlib import Path
 # Atributes order - #file_number,spec type (Df(Z),I(Z)),spec_files_number(234_1, 235_1, 233_1, 123 etc)
 # Creates a canvas based on the height of image number. Asks in terminal
 # if you want to get another image (like a .png).
-
 # root_paths must be edited for each folder you are working on
 # may need to change the forward slash in windows or linux!
-root = f"D:/LTData/2019-07-11/"
+
+
+# Sybolic Links don't work here. Need to be a real path!
+
+root = f"/mnt/bigdrive/LTData/2019-07-11/"
 root_matrix = f"default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--"
 root_image_path = f"{root}{root_matrix}"
 root_specs_path = f"{root}specs/{root_matrix}"
@@ -24,6 +27,7 @@ txt_input = (f.read()).split(" ")
 image_path = f"{root_image_path}{txt_input[0]}.Z_mtrx"
 
 specs_list = txt_input[2:]
+specs_list[-1] = specs_list[-1].rstrip("\n")
 specs_path = []
 for item in specs_list:
     specs_path.append(f"{root_specs_path}{item}-{txt_input[1]}_1.txt")
@@ -31,11 +35,10 @@ for item in specs_list:
 # Retreive size of image from image_path - and check if must keep it
 # TODO check if I really need this. For now use file_index=0
 
-# print("Select which image you want")
-# print("Type 0: up forward, 1: up retrace, 2: down forward, 3: down retrace")
-# file_index = int(input())
+print("Select which image you want")
+print("Type 0: up forward, 1: up retrace, 2: down forward, 3: down retrace")
+file_index = int(input())
 
-file_index = 0
 image, image_raw = import_matrix_file(file_index, image_path)
 image_height = image_raw.height
 image_size = image.shape[0]
@@ -118,7 +121,7 @@ while index < len(spec_pos):
 
 plt.xlabel("Z[nm]")
 plt.title(f"Image {txt_input[0]} with spec position")
-plt.savefig(f"D:/LTData/2019-07-11/specs/{txt_input[0]}Z_with_{txt_input[1]}_specs.png", bbox_inches="tight", transparent=True)
+plt.savefig(f"{root}specs/{txt_input[0]}Z_with_{txt_input[1]}_specs.png", bbox_inches="tight", transparent=True)
 plt.show()
 
 # ----------------------------------------------------------------------------------------

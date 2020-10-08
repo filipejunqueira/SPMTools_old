@@ -66,8 +66,8 @@ def load_spec(file_path):
 def get_one_line(filepath, line_number):
     return check_output(["sed", "-n", "%sp" % line_number, filepath])
 
-
 # Todo - add initialdir=initialdirectory atribute ti get_path_gui
+
 def get_path_gui():
     root = tk.Tk()
     root.withdraw()  # prevents the default window  to open.
@@ -89,7 +89,7 @@ def plot_spec(file_path):
     plt.plot(spec.forward[:, 0] / 10 ** (-9), spec.forward[:, 1], "#06D6A0")
     plt.plot(spec.retrace[:, 0] / 10 ** (-9), spec.retrace[:, 1], "#FFD166")
     plt.ylabel("Frequency shift | df(Z)[Hz]")
-    plt.title(plot_title)
+]    plt.title(plot_title)
     plt.xlabel("Z[nm]")
 
     # setting up x ticks and y ticks - This is important so the last and first ticks are visible
