@@ -15,11 +15,11 @@ from pathlib import Path
 
 # Sybolic Links don't work here. Need to be a real path!
 
-root = f"/mnt/bigdrive/LTData/2019-07-11/"
-root_matrix = f"default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--"
+root = f"/mnt/bigdrive/LTData/2020-08-03/"
+root_matrix = f"20200803-130406_GaAs(110)--AFM_NonContact_QPlus--"
 root_image_path = f"{root}{root_matrix}"
 root_specs_path = f"{root}specs/{root_matrix}"
-print("Select the input file")
+print("Select the input file")1
 f = open(get_path_gui(), "r")
 txt_input = (f.read()).split(" ")
 

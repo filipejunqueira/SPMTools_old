@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99c3221f-11d4-444f-a31d-14ddc29ea152" name="Default Changelist" comment="Todo notes added and labels corrected">
-      <change afterPath="$PROJECT_DIR$/load_traceR.py" afterDir="false" />
+    <list default="true" id="99c3221f-11d4-444f-a31d-14ddc29ea152" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecPositionOnImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpecPositionOnImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load_traceR.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_traceR.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spmFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/spmFunctions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,6 +60,9 @@
       <module name="SPMTools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/def38/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -114,6 +104,9 @@
       <module name="SPMTools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/def38/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -165,7 +158,9 @@
       <workItem from="1601417918289" duration="2428000" />
       <workItem from="1601421556709" duration="55000" />
       <workItem from="1602106739154" duration="130000" />
-      <workItem from="1602120299750" duration="8299000" />
+      <workItem from="1602120299750" duration="9105000" />
+      <workItem from="1602266261602" duration="9192000" />
+      <workItem from="1602434532141" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="Another commit">
       <created>1573590353565</created>
@@ -188,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573662813310</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="load trace R">
+      <created>1602129403958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602129403959</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -206,21 +208,34 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Another commit" />
     <MESSAGE value="Todo notes added and labels corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todo notes added and labels corrected" />
+    <MESSAGE value="load trace R" />
+    <option name="LAST_COMMIT_MESSAGE" value="load trace R" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2338" y="211" width="1084" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602120939455">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2338" y="211" width="1084" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602120939455" />
-    <state x="2495" y="263" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602120932509">
+    <state x="2474" y="112" width="802" height="889" key="CommitChangelistDialog2" timestamp="1602129403826">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2495" y="263" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602120932509" />
-    <state width="960" height="526" key="XDebugger.FullValuePopup" timestamp="1602124194490">
+    <state x="2474" y="112" width="802" height="889" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602129403826" />
+    <state x="2495" y="263" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602434556254">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="960" height="526" key="XDebugger.FullValuePopup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602124194490" />
+    <state x="2495" y="263" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602434556254" />
+    <state x="2475" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602129426594">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2475" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602129426594" />
+    <state width="960" height="526" key="XDebugger.FullValuePopup" timestamp="1602273384914">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="960" height="526" key="XDebugger.FullValuePopup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602273384914" />
+    <state x="2684" y="469" width="382" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602129436336">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2684" y="469" width="382" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602129436336" />
     <state x="2722" y="340" width="306" height="433" key="refactoring.ChangeSignatureDialog" timestamp="1602128720316">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

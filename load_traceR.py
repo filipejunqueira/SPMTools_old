@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import spmFunctions
 
-root_path = "/mnt/bigdrive/LTData/2019-07-11"
-file_path = "default_2019Jul11-160426_AFM_NonContact_QPlus-AFM_NonContact_QPlus_AtomManipulation--60_1-Z(r).txt"
+root_path = "/mnt/bigdrive/LTData/2020-08-03/"
+file_path = "20200803-130406_GaAs(110)--AFM_NonContact_QPlus--17_1-Df(Z)_1.txt"
 path = f"{root_path}/specs/{file_path}"
 
-trace = spmFunctions.load_trace_r(file_path=path)
-x = spmFunctions.plot_trace_r(path)
+#graph = spmFunctions.plot_trace_Zr(path)
+graph = spmFunctions.plot_trace_Dfr(path)

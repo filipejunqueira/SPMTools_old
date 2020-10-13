@@ -6,6 +6,19 @@ from tkinter.filedialog import askopenfilename
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+def load_trace(file_path):
+
+    data = np.loadtxt(file_path)
+    data_size = len(data)
+
+    class Trace:
+        def __init__(self, size, pos, data_):
+            self.size = size
+            self.data = data_
+
+    trace_object = Trace(data_size,data)
+    return  trace_object
+
 def load_trace_r(file_path):
 
     data = np.loadtxt(file_path)
@@ -170,7 +183,7 @@ def plot_spec(file_path):
     )
     return True
 
-def plot_trace_r(file_path):
+def plot_trace_Zr(file_path):
 
     trace = load_trace_r(file_path)
 
@@ -180,32 +193,130 @@ def plot_trace_r(file_path):
 
     fig = plt.figure()
 
-    y_max = max(trace.data[:, 1])
+    alt_y = trace.data[:, 1]
+    y = np.array([i - max(alt_y) for i in alt_y])
+    x = np.array(trace.data[:,0])
+    y_max = max(y)
+    y_min = min(y)
 
-    plt.plot(trace.data[:, 0] / 10 ** (-9), trace.data[:, 1] / 10 ** (-9), "#06D6A0")
+    plt.plot(x / 10 ** (-9), y / 10 ** (-12), "#06D6A0")
 
-    plt.ylabel("Z(r)[nm]")
+    plt.ylabel("Vertical displacement - Z(r)[pm]")
     plt.title(plot_title)
     plt.xlabel("Trace - r[nm]")
     plt.gca().invert_xaxis()
 
+    xa = trace.position[0][0]
+    ya = trace.position[0][1]
+    xb = trace.position[1][0]
+    yb = trace.position[1][1]
+
+    # pos_lenght is diferent then max(x) which is super weird.
+    # I'm assuming there is some error/bug with the manipulation vector on the vernisage file.
+    pos_lenght = np.linalg.norm(trace.position[0] - trace.position[1])
+
+
     # setting up x ticks and y ticks - This is important so the last and first ticks are visible
-    #xticks_array = np.around(np.linspace(min(trace.data[:, 0] / 10 ** (-9)), max(trace.data[:, 0] / 10 ** (-9)), num=5, ), 2, )
+    xticks_array = np.around(np.linspace(0.0, max(x)*10**9, num=10, ), 2)
+    yticks_array = np.around(np.linspace(y_min*10**12, y_max*10**12, num=12), 0)
 
-
-    #yticks_array = np.around(np.linspace(y_min, y_max, num=5), 3)
-    #plt.xticks(xticks_array)
-    #plt.yticks(yticks_array)
+    plt.xticks(xticks_array)
+    plt.yticks(yticks_array)
 
     # Text showing the positions of the spec. It just copy that from the positions from the .txt
     # It puts this text in the lower right coner of the the figure.
 
-    #textposx = (min(trace.data[:, 0] / 10 ** (-9)) + max(trace.data[:, 0] / 10 ** (-9))) / 2
-    #textposx = 400
-    #textposy = 400
-    #textposy = (y_max + y_min)
+    textposx = (min(x / 10 ** (-9)) + max(x / 10 ** (-9))) / 2
+    textposy = (y_max*10**(9) + y_min*10**12) / 2
+    plt.text(textposx * (2), textposy * (2), f"Feedback mode, df=-20Hz", fontsize=7, family="serif", )
+    plt.savefig(f"{root_path}/specs/{plot_title}.png", bbox_inches="tight", transparent=True, )
+    plt.show()
 
-    #plt.text(textposx * (1.1), textposy * (1.5), f"Spec pos: {trace.position}", fontsize=7, family="serif", )
+    return True
+
+def plot_trace_Dfr(file_path):
+
+    trace = load_trace_r(file_path)
+
+    root_path = file_path.split("/specs/")[0]
+    temp_title = file_path.split("--")
+    plot_title = temp_title[1].replace(".txt", "")
+
+    fig = plt.figure()
+
+    y = np.array(trace.data[:,1])
+    x = np.array(trace.data[:,0])
+    y_max = max(y)
+    y_min = min(y)
+
+    plt.plot(x / 10 ** (-9), y, "#06D6A0")
+
+    plt.ylabel("Frequency shift - Df(r)[Hz]")
+    plt.title(plot_title)
+    plt.xlabel("Trace - r[nm]")
+    plt.gca().invert_xaxis()
+
+    xa = trace.position[0][0]
+    ya = trace.position[0][1]
+    xb = trace.position[1][0]
+    yb = trace.position[1][1]
+
+    # pos_lenght is diferent then max(x) which is super weird.
+    # I'm assuming there is some error/bug with the manipulation vector on the vernisage file.
+    #pos_lenght = np.linalg.norm(trace.position[0] - trace.position[1])
+
+
+    # setting up x ticks and y ticks - This is important so the last and first ticks are visible
+    xticks_array = np.around(np.linspace(0.0, max(x)*10**9, num=10, ), 2)
+    yticks_array = np.around(np.linspace(y_min, y_max, num=10), 2)
+
+    plt.xticks(xticks_array)
+    plt.yticks(yticks_array)
+
+    plt.savefig(f"{root_path}/specs/{plot_title}.png", bbox_inches="tight", transparent=True, )
+    plt.show()
+
+    return True
+
+def plot_trace(file_path):
+
+    trace = load_trace(file_path)
+
+    root_path = file_path.split("/specs/")[0]
+    temp_title = file_path.split("--")
+    plot_title = temp_title[1].replace(".txt", "")
+
+    fig = plt.figure()
+
+    y = np.array(trace.data[:,1])
+    x = np.array(trace.data[:,0])
+    y_max = max(y)
+    y_min = min(y)
+
+    plt.plot(x / 10 ** (-9), y, "#06D6A0")
+
+    plt.ylabel("Frequency shift - Df(r)[Hz]")
+    plt.title(plot_title)
+    plt.xlabel("Trace - r[nm]")
+    plt.gca().invert_xaxis()
+
+    xa = trace.position[0][0]
+    ya = trace.position[0][1]
+    xb = trace.position[1][0]
+    yb = trace.position[1][1]
+
+    # pos_lenght is diferent then max(x) which is super weird.
+    # I'm assuming there is some error/bug with the manipulation vector on the vernisage file.
+    #pos_lenght = np.linalg.norm(trace.position[0] - trace.position[1])
+
+
+    # setting up x ticks and y ticks - This is important so the last and first ticks are visible
+    xticks_array = np.around(np.linspace(0.0, max(x)*10**9, num=10, ), 2)
+    yticks_array = np.around(np.linspace(y_min, y_max, num=10), 2)
+
+    plt.xticks(xticks_array)
+    plt.yticks(yticks_array)
+
     plt.savefig(f"{root_path}/specs/{plot_title}.png", bbox_inches="tight", transparent=True, )
     plt.show()
 
