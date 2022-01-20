@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99c3221f-11d4-444f-a31d-14ddc29ea152" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecPositionOnImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpecPositionOnImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load_traceR.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_traceR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spmFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/spmFunctions.py" afterDir="false" />
-    </list>
+    <list default="true" id="99c3221f-11d4-444f-a31d-14ddc29ea152" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +25,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="JupyterTrust" id="2d935795-af5e-436d-98b6-e5cff40f1f26" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1iCiLIWljVX7i45OFPC5GOu9JL3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,9 +36,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/load_traceR.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -158,6 +157,7 @@
       <workItem from="1602120299750" duration="9105000" />
       <workItem from="1602266261602" duration="9192000" />
       <workItem from="1602434532141" duration="45000" />
+      <workItem from="1642701874810" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="Another commit">
       <created>1573590353565</created>
@@ -187,7 +187,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602129403959</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="load trace R">
+      <created>1642701976685</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642701976685</updated>
+    </task>
+    <task id="LOCAL-00006" summary="load trace R">
+      <created>1642702083406</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642702083406</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -208,44 +222,10 @@
     <MESSAGE value="load trace R" />
     <option name="LAST_COMMIT_MESSAGE" value="load trace R" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="2338" y="211" width="1084" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602120939455">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2338" y="211" width="1084" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602120939455" />
-    <state x="2474" y="112" width="802" height="889" key="CommitChangelistDialog2" timestamp="1602129403826">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2474" y="112" width="802" height="889" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602129403826" />
-    <state x="2495" y="263" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602434556254">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2495" y="263" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602434556254" />
-    <state x="2475" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602129426594">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2475" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602129426594" />
-    <state width="960" height="526" key="XDebugger.FullValuePopup" timestamp="1602273384914">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="960" height="526" key="XDebugger.FullValuePopup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602273384914" />
-    <state x="2684" y="469" width="382" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602129436336">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2684" y="469" width="382" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602129436336" />
-    <state x="2722" y="340" width="306" height="433" key="refactoring.ChangeSignatureDialog" timestamp="1602128720316">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2722" y="340" width="306" height="433" key="refactoring.ChangeSignatureDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602128720316" />
-    <state x="2543" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602122019473">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2543" y="259" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1602122019473" />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/specloader$loadspecscript.coverage" NAME="loadspecscript Coverage Results" MODIFIED="1572901729236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/specloader$specloader.coverage" NAME="loadspecscript Coverage Results" MODIFIED="1572952177582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/specloader$DefaultSpecLoader.coverage" NAME="DefaultSpecLoader Coverage Results" MODIFIED="1572982250349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/specloader$loadspecscript.coverage" NAME="loadspecscript Coverage Results" MODIFIED="1572901729236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="masterDetails">
     <states>
