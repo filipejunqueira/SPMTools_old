@@ -7,3 +7,6 @@ path = f"{root_path}/specs/{file_path}"
 
 #graph = spmFunctions.plot_trace_Zr(path)
 graph = spmFunctions.plot_trace_Dfr(path)
+
+
+#TEST

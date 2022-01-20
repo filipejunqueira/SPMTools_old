@@ -74,8 +74,6 @@ def import_matrix_file(series_number, file_path):
 
 
 # Function that loads a spec file (exported from Vernisage in .txt)
-
-
 def load_spec(file_path):
 
     data = np.loadtxt(file_path)
